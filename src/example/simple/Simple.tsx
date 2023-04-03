@@ -1,28 +1,37 @@
 import * as React from "react";
-import Onboarder, { Steps, Structure } from "../..";
-import {
-  exampleFinalSteps,
-  ExampleOnboarderState,
-  exampleSteps,
-  exampleStructure,
-} from "../common/data";
-import SimpleStepContainer from "./stepContainer/SimpleStepContainer";
+import PdfTemplate, {
+  FieldType,
+  Plugin,
+  Template,
+  Preview,
+  Controls,
+} from "../..";
 
 export interface SimpleProps {
   debug?: boolean;
 }
 
-export const Simple: React.FC<SimpleProps> = ({ debug }) => {
-  return (
-    <Onboarder<ExampleOnboarderState>
-      steps={exampleSteps}
-      initialStep="firstStep"
-      finalSteps={exampleFinalSteps}
-      structure={exampleStructure}
-      StepContainer={SimpleStepContainer}
-      debug={debug}
-    />
-  );
+type State = { title: { text: string } };
+
+const simpleTemplate: Template<State> = {
+  basePdf: "",
+  fields: {
+    title: {
+      initialState: { text: "" },
+      type: FieldType.Text,
+    },
+  },
 };
+
+const plugins: Plugin<unknown, any>[] = [];
+
+function Simple(props: SimpleProps) {
+  return (
+    <PdfTemplate<State> template={simpleTemplate} plugins={plugins}>
+      <Preview />
+      <Controls />
+    </PdfTemplate>
+  );
+}
 
 export default Simple;

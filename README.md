@@ -1,8 +1,8 @@
-# Onboarder
+# Pdf template
 
 There are a lot of react steppers/wizards/onboarding libs out there. Onboarder is different:
 
-- [Tiny](https://bundlephobia.com/result?p=@guestbell/onboarder@latest)
+- [Tiny](https://bundlephobia.com/result?p=@guestbell/pdf-template@latest)
 - Non-linear - Jump between steps, lib predicts rest of the way and time taken
 - 0 dependencies - Build your UI or use our
 - Easy setup
@@ -11,18 +11,18 @@ There are a lot of react steppers/wizards/onboarding libs out there. Onboarder i
 # Install
 
 ```sh
-npm install @guestbell/onboarder --save
+npm install @guestbell/pdf-template --save
 ```
 
 or
 
 ```sh
-yarn add @guestbell/onboarder
+yarn add @guestbell/pdf-template
 ```
 
 ## Demo
 
-[Complex UI](https://guestbell.github.io/onboarder/?path=/story/fancy--default) or [Simple example](https://guestbell.github.io/onboarder/?path=/story/simple--default)
+[Complex UI](https://guestbell.github.io/pdf-template/?path=/story/fancy--default) or [Simple example](https://guestbell.github.io/pdf-template/?path=/story/simple--default)
 
 ## Getting started
 
@@ -182,10 +182,10 @@ function SimpleStepContainer<TState extends {}>(
 }
 ```
 7. Done!
-You can see this example on [github](https://github.com/guestbell/onboarder/blob/main/src/example/simple/Simple.tsx)
+You can see this example on [github](https://github.com/guestbell/pdf-template/blob/main/src/example/simple/Simple.tsx)
 
 ## API
-[Here](https://github.com/guestbell/onboarder/blob/main/api-docs/modules.md)
+[Here](https://github.com/guestbell/pdf-template/blob/main/api-docs/modules.md)
 
 ## FAQ
 ### How can I add my extra props to the step?

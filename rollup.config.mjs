@@ -3,7 +3,7 @@ import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import scss from "rollup-plugin-scss";
 import typescript from "@rollup/plugin-typescript";
-import { terser } from "rollup-plugin-terser";
+import terser from '@rollup/plugin-terser';
 import dts from "rollup-plugin-dts";
 import del from "rollup-plugin-delete";
 
